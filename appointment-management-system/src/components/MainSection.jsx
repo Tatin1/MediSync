@@ -1,11 +1,17 @@
-import React from 'react';
-import '../styles/MainSection.css'
-import Calendar from './Calendar';
-const MainSection = ({ patientData }) => {
+import React from "react";
+import "../styles/MainSection.css";
+import Calendar from "./Calendar";
+import Sidebar from "./Sidebar";
+
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+
+const MainSection = ({ patientData, setPatientData }) => {
   return (
     <div className="main-section">
-    <Calendar />
-      {patientData ? (
+      <Sidebar className="sdebar" setPatientData={setPatientData} />
+      <Calendar />
+      {/* {patientData ? (
         <div>
           <h3>Patient Details</h3>
           <p>First Name: {patientData.firstName}</p>
@@ -15,7 +21,7 @@ const MainSection = ({ patientData }) => {
         </div>
       ) : (
         <p>No patient data available</p>
-      )}
+      )} */}
     </div>
   );
 };

@@ -1,3 +1,12 @@
 # MediSync
 
-to run it, cd into the folder then do "npm i" then do "npm run dev"
+Designed to aid frontline medical staff at a clinic better manage patient requests.
+
+
+## How to run the program:
+
+-  cd appointment-management-system
+
+-  npm i
+
+-  npm run dev
